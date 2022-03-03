@@ -217,6 +217,14 @@ iframe {
   line-height: 1.2;
   text-align: center;
 }
+.login100-form-title-name {
+  display: block;
+  font-family: Raleway-Bold;
+  font-size: 23px;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+}
 .login100-form-title .big{
   font-size: 35px;
 }
