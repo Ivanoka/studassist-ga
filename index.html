@@ -11,33 +11,6 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <body>
-<?php
-		$password_false = false;
-		$missing_email = false;
-		$error_server = false;
-		try {
-			if (isset($_GET['email']) && isset($_GET['pass'])) {
-				$email = filter_var(trim($_GET['email']), FILTER_SANITIZE_STRING);
-				$pass = filter_var(trim($_GET['pass']), FILTER_SANITIZE_STRING);
-
-				$mysql = new mysqli('localhost', 'v97225_dbroot', 'ryx9mj4weow3m19752', 'v97225_db');
-				$result = $mysql->query("SELECT `user_email`AND `user_password` FROM `users` WHERE `user_email` = '$email'");
-				$result = $result->fetch_assoc();
-				if(count($req_email) != 0) {
-					if (password_verify($pass, $result['user_password'])) {
-						header('Location: https://panel.agnes.ga');
-					} else {
-						$password_false = true;
-					}
-				} else { 
-					$missing_email = true;
-				}
-				$mysql->close();
-			}
-		}  catch(Exception $e) {
-			$error_server = true;
-		}
-	?>
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
