@@ -1,1 +1,1 @@
-# studassist
+# studassist.ga
