@@ -87,3 +87,9 @@
 
 
 })(jQuery);
+
+// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+//     alert("код для мобильных устройств");
+//   } else {
+//     alert("код для обычных устройств");
+// }
